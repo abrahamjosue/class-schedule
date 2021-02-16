@@ -1,0 +1,178 @@
+
+:root {
+    --bg-color: #222f3e;
+    --class1-color: #ee5253;
+    --class2-color: #10ac84;
+    --class3-color: #ff9f43;
+    --class4-color: #f368e0;
+    --class5-color: #5f27cd;
+    --class6-color: #54a0ff;
+    --doc-color: #fff;
+    --title-font: 'Montserrat', sans-serif;
+    --doc-font: 'Open Sans', sans-serif;
+    --thead-color: #8395a7;
+    --border-color: #576574;
+    --link-color: #c8d6e5;
+}
+
+/* Globals */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--doc-color);
+    font-family: var(--doc-font);
+    font-weight: 400;
+}
+
+td {
+    font-size: 1.4rem;
+    text-align: center;
+    height: 5rem; /* Cells height */
+}
+
+table {
+    width: 100%;
+}
+
+/* Utilities */
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+@media (max-width: 568px) {
+    .container {
+        width: 45rem;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+/* Class Schedule */
+
+.time-column {
+    min-width: 10rem; /* Cells height */
+}
+
+@media (max-width: 568px) {
+    .time-column {
+        min-width: 3rem;
+    }
+}
+
+.day-column {
+    width: 20rem;
+}
+
+.title, .references-title {
+    font-size: 3.2rem;
+    font-family: var(--title-font);
+    font-weight: 300;
+    text-align: center;
+}
+
+.career-name, .footer-credits {
+    font-size: 1.6rem;
+    font-family: var(--title-font);
+}
+
+.career-name {
+    margin-bottom: 1rem;
+}
+
+.theaders {
+    font-size: 1.6rem;
+    font-weight: 400;
+    background-color: var(--thead-color);
+}
+
+.border {
+    border: 1px solid #576574;
+    border-collapse: collapse;
+    padding: 0.5rem;
+}
+
+.class1, .teacher1 {
+    background-color: var(--class1-color);
+}
+
+.class2, .teacher2 {
+    background-color: var(--class2-color);
+}
+
+.class3, .teacher3 {
+    background-color: var(--class3-color);
+}
+
+.class4, .teacher4 {
+    background-color: var(--class4-color);
+}
+
+.class5, .teacher5 {
+    background-color: var(--class5-color);
+}
+
+.class6, .teacher6 {
+    background-color: var(--class6-color);
+}
+
+.active {
+    border-color: var(--doc-color);
+    border-width: 2px;
+
+}
+
+
+/* Teachers and links reference */
+
+.classes-container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+.teacher-name, .class-name, .meet-link {
+    margin: 0.5rem 0;
+    font-family: var(--title-font);
+    font-weight: 400;
+}
+
+.teacher-name {
+    font-size: 2rem;
+}
+
+.class-name {
+    font-size: 1.8rem;
+}
+
+.info-container {
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+.meet-link {
+    font-size: 1.6rem;
+    color: var(--link-color);
+}
+
+
+
+/* Footer */
+
+.footer-credits {
+    margin: 5rem auto 0 auto;
+    justify-content: space-between;
+}
