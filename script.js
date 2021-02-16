@@ -1,3 +1,4 @@
 let date = new Date();
-let write = document.getElementById("span-date");
-write.innerHTML = String(date);    
+let day = date.getDay();
+let hour = date.getHours();
+

@@ -6,7 +6,7 @@
     --class3-color: #ff9f43;
     --class4-color: #f368e0;
     --class5-color: #5f27cd;
-    --class6-color: #54a0ff;
+    --class6-color: #01a3a4;
     --doc-color: #fff;
     --title-font: 'Montserrat', sans-serif;
     --doc-font: 'Open Sans', sans-serif;
@@ -31,13 +31,23 @@ body {
 }
 
 td {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     text-align: center;
     height: 5rem; /* Cells height */
 }
 
+@media (max-width: 568px) {
+    td {
+        font-size: 0.8rem;
+    }
+}
+
 table {
     width: 100%;
+}
+
+p {
+    margin: 0;
 }
 
 /* Utilities */
@@ -49,7 +59,7 @@ table {
 
 @media (max-width: 568px) {
     .container {
-        width: 45rem;
+        width: 95%;
     }
 }
 
@@ -64,12 +74,12 @@ table {
 /* Class Schedule */
 
 .time-column {
-    min-width: 10rem; /* Cells height */
+    max-width: 10rem; 
 }
 
 @media (max-width: 568px) {
     .time-column {
-        min-width: 3rem;
+        min-width: 2rem;
     }
 }
 
@@ -94,16 +104,22 @@ table {
 }
 
 .theaders {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 400;
     background-color: var(--thead-color);
+}
+
+@media (max-width: 568px) {
+    .theaders {
+        font-size: 0.8rem;
+    }
 }
 
 .border {
     border: 1px solid #576574;
     border-collapse: collapse;
-    padding: 0.5rem;
 }
+
 
 .class1, .teacher1 {
     background-color: var(--class1-color);
@@ -129,11 +145,6 @@ table {
     background-color: var(--class6-color);
 }
 
-.active {
-    border-color: var(--doc-color);
-    border-width: 2px;
-
-}
 
 
 /* Teachers and links reference */
@@ -143,6 +154,13 @@ table {
     column-gap: 1rem;
     row-gap: 1rem;
 }
+
+@media (max-width: 568px) {
+    .classes-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 
 .teacher-name, .class-name, .meet-link {
     margin: 0.5rem 0;
@@ -166,6 +184,7 @@ table {
 .meet-link {
     font-size: 1.6rem;
     color: var(--link-color);
+    text-decoration: none;
 }
 
 
