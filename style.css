@@ -34,11 +34,13 @@ td {
     font-size: 1.6rem;
     text-align: center;
     height: 5rem; /* Cells height */
+    padding: 1rem;
 }
 
 @media (max-width: 568px) {
     td {
         font-size: 0.8rem;
+        padding: none;
     }
 }
 
@@ -166,6 +168,7 @@ p {
     margin: 0.5rem 0;
     font-family: var(--title-font);
     font-weight: 400;
+    color: var(--doc-color);
 }
 
 .teacher-name {
