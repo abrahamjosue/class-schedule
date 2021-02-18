@@ -12,17 +12,21 @@
     --doc-font: 'Open Sans', sans-serif;
     --thead-color: #8395a7;
     --border-color: #576574;
-    --link-color: #c8d6e5;
 }
 
 /* Globals */
 
 html {
     font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,*::before,*::after {
+    box-sizing: border-box;
 }
 
 body {
-    box-sizing: border-box;
+    font-size: 1.6rem;
     margin: 0;
     background-color: var(--bg-color);
     color: var(--doc-color);
@@ -34,7 +38,12 @@ td {
     font-size: 1.6rem;
     text-align: center;
     height: 5rem; /* Cells height */
-    padding: 1rem;
+}
+
+@media (min-width: 1200px) {
+    td {
+        padding: 2rem; /* I don't now why padding only works with media query*/
+    }
 }
 
 @media (max-width: 568px) {
@@ -50,6 +59,10 @@ table {
 
 p {
     margin: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Utilities */
@@ -172,11 +185,17 @@ p {
 }
 
 .teacher-name {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .class-name {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+}
+
+.meet-link {
+    font-size: 1.5rem;
+    color: var(--doc-color);
+    text-decoration: none;
 }
 
 .info-container {
@@ -184,17 +203,27 @@ p {
     padding: 0.5rem 0;
 }
 
-.meet-link {
-    font-size: 1.6rem;
-    color: var(--link-color);
-    text-decoration: none;
+@media (max-width: 568px) {
+    .teacher-name {
+        font-size: 1.5rem;
+    }
+    .class-name {
+        font-size: 1.8rem;
+    }
+    .meet-link {
+        font-size: 1.2rem;
+    }
 }
-
-
 
 /* Footer */
 
 .footer-credits {
-    margin: 5rem auto 0 auto;
+    margin: 5rem auto 1rem auto;
     justify-content: space-between;
+}
+
+@media (max-width: 568px) {
+    .footer-credits {
+        font-size: 1rem;
+    }
 }
