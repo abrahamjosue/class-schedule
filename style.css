@@ -129,7 +129,7 @@ a {
 @media (max-width: 568px) {
     .theaders {
         font-size: 0.8rem;
-        height: auto;
+        height: 2rem;
     }
 }
 
