@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    let date = new Date("February 22, 2021 07:24:00");
+    let date = new Date();
     let day = date.getDay();
     let hour = date.getHours();
 
