@@ -3,6 +3,29 @@ $(document).ready(function(){
     let day = date.getDay();
     let hour = date.getHours();
 
+    function refreshAt(hours, minutes, seconds) {
+        var now = new Date();
+        var then = new Date();
+    
+        if(now.getHours() > hours ||
+           (now.getHours() == hours && now.getMinutes() > minutes) ||
+            now.getHours() == hours && now.getMinutes() == minutes && now.getSeconds() >= seconds) {
+            then.setDate(now.getDate() + 1);
+        }
+        then.setHours(hours);
+        then.setMinutes(minutes);
+        then.setSeconds(seconds);
+    
+        var timeout = (then.getTime() - now.getTime());
+        setTimeout(function() { window.location.reload(); }, timeout);
+    }
+
+    refreshAt(7,0,0);
+    refreshAt(8,0,0);
+    refreshAt(9,0,0);
+    refreshAt(10,0,0);
+    refreshAt(11,0,0);
+
     // Dark the day column header area
     if (day === 1) {
         $("th#monday").addClass("active-day");
